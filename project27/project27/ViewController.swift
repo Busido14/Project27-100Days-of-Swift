@@ -40,6 +40,8 @@ class ViewController: UIViewController {
             drawImagesAndText()
         case 6:
             drawEmodji()
+        case 7:
+            drawTwin()
             
         default:
             break
@@ -190,7 +192,7 @@ class ViewController: UIViewController {
                     ctx.cgContext.setFillColor(UIColor.black.cgColor)
                     ctx.cgContext.addRect(smile)
                     ctx.cgContext.drawPath(using: .fill)
-//
+                    
                     ctx.cgContext.setFillColor(UIColor.black.cgColor)
                     ctx.cgContext.addEllipse(in: leftEye)
                     ctx.cgContext.drawPath(using: .fill)
@@ -200,6 +202,49 @@ class ViewController: UIViewController {
                     ctx.cgContext.drawPath(using: .fill)
         }
         
+        imageVIew.image = img
+    }
+    
+    func drawTwin() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        
+        let img = renderer.image { ctx in
+            let rectangle = CGRect(x: 0, y: 0, width: 512, height: 512)
+            
+            ctx.cgContext.setStrokeColor(UIColor.white.cgColor)
+            ctx.cgContext.setLineWidth(3)
+            
+            let upperY = CGFloat(200)
+            let lowerY = CGFloat(350)
+            let startX = CGFloat(50)
+            
+            ctx.cgContext.move(to: CGPoint(x: startX, y: upperY))
+            ctx.cgContext.addLine(to: CGPoint(x: startX + 130, y: upperY))
+            ctx.cgContext.move(to: CGPoint(x: startX + 65, y: upperY))
+            ctx.cgContext.addLine(to: CGPoint(x: startX + 65, y: lowerY))
+            
+            ctx.cgContext.move(to: CGPoint(x: startX + 140, y: upperY))
+            ctx.cgContext.addLine(to: CGPoint(x: startX + 165, y: lowerY))
+            ctx.cgContext.move(to: CGPoint(x: startX + 165, y: lowerY))
+            ctx.cgContext.addLine(to: CGPoint(x: startX + 180, y: lowerY - 75))
+            ctx.cgContext.move(to: CGPoint(x: startX + 180, y: lowerY - 75))
+            ctx.cgContext.addLine(to: CGPoint(x: startX + 205, y: lowerY))
+            ctx.cgContext.move(to: CGPoint(x: startX + 205, y: lowerY))
+            ctx.cgContext.addLine(to: CGPoint(x: startX + 225, y: upperY))
+            
+            ctx.cgContext.move(to: CGPoint(x: startX + 235, y: upperY))
+            ctx.cgContext.addLine(to: CGPoint(x: startX + 235, y: lowerY))
+            
+            ctx.cgContext.move(to: CGPoint(x: startX + 245, y: lowerY))
+            ctx.cgContext.addLine(to: CGPoint(x: startX + 270, y: upperY))
+            ctx.cgContext.move(to: CGPoint(x: startX + 270, y: upperY))
+            ctx.cgContext.addLine(to: CGPoint(x: startX + 300, y: lowerY))
+            ctx.cgContext.move(to: CGPoint(x: startX + 300, y: lowerY))
+            ctx.cgContext.addLine(to: CGPoint(x: startX + 325, y: upperY))
+            
+            ctx.cgContext.addRect(rectangle)
+            ctx.cgContext.drawPath(using: .fillStroke)
+        }
         imageVIew.image = img
     }
 }

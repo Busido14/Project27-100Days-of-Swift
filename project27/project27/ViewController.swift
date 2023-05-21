@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBAction func redrawTapped(_ sender: Any) {
         currentDrawType += 1
         
-        if currentDrawType > 5 {
+        if currentDrawType > 7 {
             currentDrawType = 0
         }
         
@@ -38,6 +38,8 @@ class ViewController: UIViewController {
             drawLines()
         case 5:
             drawImagesAndText()
+        case 6:
+            drawEmodji()
             
         default:
             break
@@ -75,7 +77,6 @@ class ViewController: UIViewController {
             ctx.cgContext.addEllipse(in: rectangle)
             ctx.cgContext.drawPath(using: .fillStroke)
         }
-        
         imageVIew.image = image
         
     }
@@ -169,6 +170,36 @@ class ViewController: UIViewController {
             mouse?.draw(at: CGPoint(x: 300, y: 150))
         }
 
+        imageVIew.image = img
+    }
+    
+    func drawEmodji() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+                
+                let img = renderer.image { ctx in
+            
+                    let rectangle = CGRect(x: 0, y: 0, width: 512, height: 512).insetBy(dx: 5, dy: 5)
+                    let smile = CGRect(x: 130, y: 350, width: 242, height: 10)
+                    let leftEye = CGRect(x: 165, y: 150, width: 50, height: 80)
+                    let rightEye = CGRect(x: 277, y: 150, width: 50, height: 80)
+                    
+                    ctx.cgContext.setFillColor(UIColor.yellow.cgColor)
+                    ctx.cgContext.addEllipse(in: rectangle)
+                    ctx.cgContext.drawPath(using: .fill)
+                    
+                    ctx.cgContext.setFillColor(UIColor.black.cgColor)
+                    ctx.cgContext.addRect(smile)
+                    ctx.cgContext.drawPath(using: .fill)
+//
+                    ctx.cgContext.setFillColor(UIColor.black.cgColor)
+                    ctx.cgContext.addEllipse(in: leftEye)
+                    ctx.cgContext.drawPath(using: .fill)
+
+                    ctx.cgContext.setFillColor(UIColor.black.cgColor)
+                    ctx.cgContext.addEllipse(in: rightEye)
+                    ctx.cgContext.drawPath(using: .fill)
+        }
+        
         imageVIew.image = img
     }
 }

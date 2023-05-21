@@ -16,32 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Yy-pN-MvZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HTl-g9-bLf">
                                 <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMI-Iw-i6N">
-                                <rect key="frame" x="369" y="1116" width="82" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAE-yp-YpB">
+                                <rect key="frame" x="369" y="1125" width="82" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Redraw"/>
                                 <connections>
-                                    <action selector="redrawTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d6v-xt-5FO"/>
+                                    <action selector="redrawTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6XN-qp-ajl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qMI-Iw-i6N" secondAttribute="trailing" constant="369" id="3Cp-Bo-WMs"/>
-                            <constraint firstItem="qMI-Iw-i6N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-9" id="F14-uc-oL5"/>
-                            <constraint firstItem="4Yy-pN-MvZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GC9-vp-eIJ"/>
-                            <constraint firstItem="qMI-Iw-i6N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bN6-ld-YUg"/>
-                            <constraint firstItem="4Yy-pN-MvZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cmD-DT-dyM"/>
-                            <constraint firstItem="4Yy-pN-MvZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dhj-bI-Rvg"/>
-                            <constraint firstItem="4Yy-pN-MvZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-24" id="yKf-zc-Nn2"/>
+                            <constraint firstItem="tAE-yp-YpB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3IL-af-vPP"/>
+                            <constraint firstAttribute="trailing" secondItem="HTl-g9-bLf" secondAttribute="trailing" id="K0E-HQ-YF9"/>
+                            <constraint firstItem="HTl-g9-bLf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hYa-xl-EfL"/>
+                            <constraint firstItem="HTl-g9-bLf" firstAttribute="centerX" secondItem="tAE-yp-YpB" secondAttribute="centerX" id="q5Y-TX-Sih"/>
+                            <constraint firstAttribute="bottom" secondItem="HTl-g9-bLf" secondAttribute="bottom" id="sOw-cT-cVQ"/>
+                            <constraint firstItem="HTl-g9-bLf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wOu-0c-7M5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageVIew" destination="4Yy-pN-MvZ" id="zKq-O4-4RM"/>
+                        <outlet property="imageVIew" destination="HTl-g9-bLf" id="rNq-kH-XUs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

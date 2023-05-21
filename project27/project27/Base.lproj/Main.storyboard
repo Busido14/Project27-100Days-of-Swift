@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMI-Iw-i6N">
-                                <rect key="frame" x="370" y="1125" width="82" height="35"/>
+                                <rect key="frame" x="369" y="1116" width="82" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Redraw"/>
                                 <connections>
@@ -31,8 +31,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qMI-Iw-i6N" secondAttribute="trailing" constant="368" id="3Cp-Bo-WMs"/>
-                            <constraint firstItem="qMI-Iw-i6N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F14-uc-oL5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qMI-Iw-i6N" secondAttribute="trailing" constant="369" id="3Cp-Bo-WMs"/>
+                            <constraint firstItem="qMI-Iw-i6N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-9" id="F14-uc-oL5"/>
                             <constraint firstItem="4Yy-pN-MvZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GC9-vp-eIJ"/>
                             <constraint firstItem="qMI-Iw-i6N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bN6-ld-YUg"/>
                             <constraint firstItem="4Yy-pN-MvZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cmD-DT-dyM"/>

@@ -30,7 +30,8 @@ class ViewController: UIViewController {
             drawRectangle()
         case 1:
             drawCircle()
-
+        case 2:
+            drawCheckerboard()
             
         default:
             break
@@ -59,7 +60,7 @@ class ViewController: UIViewController {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
         
         let image = renderer.image { ctx in
-            let rectangle = CGRect(x: 0, y: 0, width: 512, height: 512)
+            let rectangle = CGRect(x: 0, y: 0, width: 512, height: 512).insetBy(dx: 5, dy: 5)
             
             ctx.cgContext.setFillColor(UIColor.red.cgColor)
             ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
@@ -71,6 +72,23 @@ class ViewController: UIViewController {
         
         imageVIew.image = image
         
+    }
+    
+    func drawCheckerboard() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+
+        let image = renderer.image { ctx in
+            ctx.cgContext.setFillColor(UIColor.black.cgColor)
+
+            for row in 0 ..< 8 {
+                for col in 0 ..< 8 {
+                    if (row + col) % 2 == 0 {
+                        ctx.cgContext.fill(CGRect(x: col * 64, y: row * 64, width: 64, height: 64))
+                    }
+                }
+            }
+        }
+        imageVIew.image = image
     }
 }
 

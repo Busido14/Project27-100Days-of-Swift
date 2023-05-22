@@ -46,7 +46,6 @@ class ViewController: UITableViewController {
             vc.totalPictures = pictures.count
             navigationController?.pushViewController(vc, animated: true)
             
-            
         }
        
     }
